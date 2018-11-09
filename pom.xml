@@ -90,4 +90,22 @@
     </build>
 
 
+    <profiles>
+        <profile>
+            <id>win</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <profileActive>win</profileActive>
+            </properties>
+        </profile>
+        <profile>
+            <id>linux</id>
+            <properties>
+                <profileActive>linux</profileActive>
+            </properties>
+        </profile>
+    </profiles>
+
 </project>
