@@ -24,9 +24,16 @@ public class HelloApi {
 
     @ApiOperation(value = "Hello", notes = "Hello")
     @RequestMapping(value = "/hello", produces = {"application/json"}, method = RequestMethod.POST)
-    public ResponseEntity consultList(
+    public ResponseEntity hello(
             @ApiParam(value = "text") @RequestParam(value = "text", required = false) String text) {
         LOG.info(text);
         return ResponseEntity.ok(text);
+    }
+
+    @ApiOperation(value = "SayHello", notes = "Hello")
+    @RequestMapping(value = "/sayHello", produces = {"application/json"}, method = RequestMethod.POST)
+    public ResponseEntity sayHello() {
+        LOG.info("hello world!");
+        return ResponseEntity.ok("hello world!");
     }
 }
